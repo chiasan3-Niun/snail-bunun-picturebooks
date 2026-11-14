@@ -4,6 +4,8 @@ $required = @(
   'assets/images/snail-book/scene-page7-leaves.png',
   'assets/images/snail-book/scene-page8-river.jpg',
   'assets/images/snail-book/scene-page9-river.jpg',
+  'assets/images/snail-book/scene-mountain.png',
+  'assets/images/snail-book/scene-garden.png',
   'data/snail-scenes.js'
 )
 foreach ($path in $required) {
