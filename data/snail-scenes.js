@@ -12,7 +12,7 @@ const snailScenes = [
     { id: 'page8-1', x: 17, y: 45, label: '左側石頭' }, { id: 'page8-2', x: 50, y: 44, label: '溪中石堆' }, { id: 'page8-3', x: 77, y: 51, label: '右側石頭' }
   ] },
   { id: 'page9', title: '溪邊草地', image: 'assets/images/snail-book/scene-page9-river.jpg', clue: '第 9 頁的溪水旁有許多石頭與草叢，沿著水流慢慢找。', snails: [
-    { id: 'page9-1', x: 22, y: 36, label: '左上石頭' }, { id: 'page9-2', x: 18, y: 74, label: '左下草叢' }, { id: 'page9-3', x: 76, y: 54, label: '右側石地' }
+    { id: 'page9-1', x: 25, y: 47, label: '左側石頭縫' }, { id: 'page9-2', x: 46, y: 58, label: '溪邊草叢堆' }, { id: 'page9-3', x: 70, y: 47, label: '右側石堆縫隙' }
   ] },
   { id: 'page10', title: '小米田裡找蝸牛', image: 'assets/images/snail-book/scene-page10-ricefield.jpg', clue: '第 10 頁的小米、稻穗和葉片堆裡，藏著不容易發現的蝸牛。', snails: [
     { id: 'page10-1', x: 12, y: 34, label: '左側小米穗裡' }, { id: 'page10-2', x: 38, y: 57, label: '中間葉片堆裡' }, { id: 'page10-3', x: 54, y: 74, label: '下方小蟲堆裡' }
