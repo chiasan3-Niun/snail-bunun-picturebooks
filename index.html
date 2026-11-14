@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蝸牛－布農族飲食故事繪本成果展示平台">
+    <title>蝸牛－布農族飲食故事繪本</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="icon" href="assets/logo-snail-watercolor.png" type="image/png">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top"><img src="assets/logo-snail-watercolor.png" alt="蝸牛 Logo"><span id="project-name"></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">選單</button>
+      <nav id="main-nav" aria-label="主要導覽"><a href="#origin">創作起源</a><a href="#books">看繪本</a><a href="#audio">聽繪本</a><a href="#animal-learning">動物閃卡</a><a href="snail.html">找蝸牛遊戲</a><a href="#team">製作團隊</a></nav>
+    </header>
+
+    <main id="top">
+      <section class="hero screen is-active" data-screen="home">
+        <img class="hero__art" src="assets/logo-snail-watercolor.png" alt="水彩蝸牛與溪流意象">
+        <div class="hero__copy">
+          <p class="kicker">布農族的飲食故事</p>
+          <h1>跟著蝸牛，走進山林。</h1>
+          <p>五本繪本、五個社群，從語言與飲食記憶開始，聽見土地留下來的故事。</p>
+          <a class="button" href="#origin">開始探索</a>
+        </div>
+      </section>
+
+      <section class="section section--paper screen" id="origin" data-screen="origin">
+        <div class="section-heading"><div><p class="kicker">The project</p><h2>繪本序</h2></div><p>先認識故事的來處，再翻開每一本繪本。</p></div>
+        <div class="origin-content">
+          <div class="prose" id="intro-copy"></div>
+          <div class="origin-details">
+            <article><h3>計畫背景</h3><div class="prose" id="background-copy"></div></article>
+            <article><h3>計畫目的</h3><div class="prose" id="purpose-copy"></div></article>
+            <article><h3>預期目標</h3><div class="goal-list" id="goals-copy"></div></article>
+          </div>
+          <div class="grant"><div class="grant__logos"><img src="assets/culture/ministry-of-culture.png" alt="文化部"><img src="assets/culture/language-development.png" alt="國家語言整體發展方案"></div><div><strong id="grant-unit"></strong><p id="grant-name"></p><p id="grant-text"></p></div></div>
+        </div>
+      </section>
+
+      <section class="section screen" id="books" data-screen="books">
+        <div class="section-heading"><div><p class="kicker">Five voices</p><h2>五本繪本</h2></div><p>每一本都保留自己的語別與社群聲音。</p></div>
+        <div class="book-grid" id="book-grid"></div>
+      </section>
+
+      <section class="section section--paper screen" id="audio" data-screen="audio">
+        <div class="section-heading"><div><p class="kicker">Listen to the stories</p><h2>聽繪本</h2></div><p>每一本繪本未來對應一支 YouTube 有聲影片。</p></div>
+        <p class="channel-link"><a class="youtube-channel" id="audio-channel-link" href="http://www.youtube.com/@chiasan3" target="_blank" rel="noreferrer"><img src="assets/culture/youtube-channel.jpg" alt="Bunun Tamazaza YouTube 頻道 Logo"><span>前往有聲繪本 YouTube 頻道</span></a></p>
+        <div class="audio-grid" id="audio-grid"></div>
+      </section>
+
+      <section class="section section--paper screen" id="animal-learning" data-screen="animal-learning">
+        <div class="section-heading"><div><p class="kicker">族語學習</p><h2>巒群布農語・動物閃卡</h2></div><p>先聽族語單字與例句，再翻看中文提示。完成閱讀後，可以挑戰 10 題聽音選圖片。</p></div>
+        <label class="autoplay-control"><input id="autoplay-toggle" type="checkbox"> 自動播放族語單字與例句</label>
+        <div class="flashcard-layout" id="flashcard-area">
+          <article class="flashcard" id="flashcard">
+            <img id="flashcard-image" src="assets/animal-flashcards/dog.jpg" alt="狗">
+            <div class="flashcard__content"><p class="flashcard__label">族語單字</p><h3 id="flashcard-word">asu</h3><p class="flashcard__label">族語例句</p><p id="flashcard-sentence">Haiza inaak tas-a asu.</p><p class="flashcard__translation" id="flashcard-translation">我有一隻狗。</p><div class="flashcard__actions"><button class="button button--small" id="play-word" type="button">播放單字</button><button class="button button--small" id="play-sentence" type="button">播放例句</button><button class="button button--text" id="flip-card" type="button">翻看提示</button></div></div>
+          </article>
+          <div class="flashcard__nav"><button class="button button--text" id="previous-card" type="button">上一張</button><span id="flashcard-progress">1 / 10</span><button class="button button--text" id="next-card" type="button">下一張</button></div>
+          <button class="button button--primary" id="start-quiz" type="button">開始 10 題聽音選圖</button>
+        </div>
+        <div class="quiz-panel" id="quiz-panel" hidden><div class="quiz-panel__topline"><p class="kicker">聽音選圖</p><span id="quiz-progress">第 1 / 10 題</span></div><h3 id="quiz-prompt">請聽族語，選出正確的圖片</h3><button class="button button--primary" id="quiz-play" type="button">播放題目</button><div class="quiz-choices" id="quiz-choices"></div><p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p><p class="quiz-score" id="quiz-score"></p><button class="button button--text" id="restart-quiz" type="button">再測一次</button></div>
+      </section>
+
+      <section class="section section--paper screen" id="design" data-screen="design">
+        <div class="section-heading"><div><p class="kicker">Design notes</p><h2>設計理念</h2></div></div>
+        <div class="prose" id="design-copy"></div>
+      </section>
+
+      <section class="section screen" id="team" data-screen="team">
+        <div class="section-heading"><div><p class="kicker">People behind the books</p><h2>製作團隊</h2></div><p>讓語言、生活經驗與飲食文化記憶一起被留下來。</p></div>
+        <dl id="team-list"></dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><strong>蝸牛－布農族飲食故事繪本</strong><p>布農族飲食文化全族語繪本及數位錄音製作語料保存暨推廣計畫</p><p class="copyright" id="copyright-copy"></p></div>
+      <div class="footer-logos"><img src="assets/culture/ministry-of-culture.png" alt="文化部"><img src="assets/culture/language-development.png" alt="國家語言整體發展方案"></div>
+      <div class="counter">本站累計訪客<br><strong id="visit-count">0</strong> 人次</div>
+    </footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
