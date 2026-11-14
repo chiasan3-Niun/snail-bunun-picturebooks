@@ -1,9 +1,9 @@
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $required = @(
-  'assets/images/snail-book/scene-mountain.png',
-  'assets/images/snail-book/scene-garden.png',
-  'assets/images/snail-book/scene-river.png',
+  'assets/images/snail-book/scene-page7-leaves.png',
+  'assets/images/snail-book/scene-page8-river.jpg',
+  'assets/images/snail-book/scene-page9-river.jpg',
   'data/snail-scenes.js'
 )
 foreach ($path in $required) {
