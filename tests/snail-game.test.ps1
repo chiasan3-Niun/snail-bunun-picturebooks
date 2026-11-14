@@ -6,4 +6,5 @@ foreach ($needle in @('snail.css','data/snail-scenes.js','snail.js','scene-image
 if ($html -match 'N/M') { throw 'The total count format is exposed' }
 foreach ($needle in @('isBookComplete','getRank','found.has','rank-result','snail.x','snail.y')) { if ($js -notmatch [regex]::Escape($needle)) { throw "Missing game behavior $needle" } }
 if ($js -notmatch "style\.display='none'") { throw 'Image load does not hide the error overlay' }
+if (-not (Test-Path (Join-Path $root 'snail-icons.css'))) { throw 'Snail found icon stylesheet is missing' }
 Write-Output 'PASS snail game'
