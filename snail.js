@@ -11,7 +11,7 @@ const decoyPositions = {
 };
 const $ = (id) => document.getElementById(id);
 function bookSnailKey(sceneId, snailId){ return `${sceneId}:${snailId}`; }
-function getRank(foundCount, complete){ if(!complete) return '蝸牛觀察員'; if(foundCount >= 10) return '蝸牛大神'; if(foundCount >= 8) return '蝸牛達人'; if(foundCount >= 5) return '蝸牛獵人'; return '蝸牛尋跡者'; }
+function getRank(foundCount, complete){ if(complete) return '蝸牛大神'; if(foundCount >= 8) return '蝸牛達人'; if(foundCount >= 5) return '蝸牛獵人'; if(foundCount >= 1) return '蝸牛尋跡者'; return '蝸牛觀察員'; }
 function isBookComplete(){ return snailScenes.every(scene => scene.snails.every(snail => found.has(bookSnailKey(scene.id, snail.id)))); }
 function getTotalSnails(){ return snailScenes.reduce((total, scene) => total + scene.snails.length, 0); }
 function renderDots(){ $('scene-dots').innerHTML = snailScenes.map((scene,index)=>`<button class="scene-dot${index===currentScene?' active':''}" type="button" aria-label="前往${scene.title}" data-scene="${index}"></button>`).join(''); document.querySelectorAll('.scene-dot').forEach(btn=>btn.addEventListener('click',()=>renderScene(Number(btn.dataset.scene)))); }
