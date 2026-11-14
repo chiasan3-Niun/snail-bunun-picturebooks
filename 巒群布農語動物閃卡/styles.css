@@ -39,3 +39,4 @@ html,body{max-width:100%;overflow-x:hidden}
 .map-scene{background-image:linear-gradient(#ffffff22,#ffffff22),url('assets/map/闖關地圖.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
 .map-scene .mountain,.map-scene .map-path{display:none}
 .site-credit{margin:2rem auto 0;padding:1.2rem;text-align:center;color:var(--muted);font-size:.85rem;line-height:1.8}.site-credit p{margin:.2rem}.site-credit a{color:var(--accent)}
+.snail-page .matching-image,.snail-page .drop-word{color:var(--ink);font-size:1.15rem;font-weight:700;background:#fffdf8}.snail-page .matching-image.is-placed{outline:3px solid var(--accent);opacity:1}.snail-page .drop-word.is-correct{color:#2e6b3d;font-weight:800}
