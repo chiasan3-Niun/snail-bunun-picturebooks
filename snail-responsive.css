@@ -1,0 +1,7 @@
+.scene-frame{max-height:min(72vh,760px)}
+.scene-frame img{max-height:min(72vh,760px);object-fit:contain}
+.snail-hotspot{border:0;background:transparent;box-shadow:none;opacity:0}
+.snail-hotspot:hover,.snail-hotspot:focus-visible{background:transparent;box-shadow:none;transform:translate(-50%,-50%)}
+.snail-hotspot.found{opacity:1;background:transparent;border:0;box-shadow:none}
+.snail-hotspot.decoy{opacity:0}
+@media(max-width:650px){.scene-frame{max-height:62vh}.scene-frame img{max-height:62vh}.snail-hotspot{width:42px;height:42px}}
